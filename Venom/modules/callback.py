@@ -36,12 +36,6 @@ async def cb_handler(_, query: CallbackQuery):
             text=START,
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
-    elif query.data == "SOURCE":
-        await query.message.edit(
-            text=SOURCE_READ,
-            reply_markup=InlineKeyboardMarkup(BACK),
-            disable_web_page_preview=True,
-        )
     elif query.data == "ABOUT":
         await query.message.edit(
             text=ABOUT_READ,
