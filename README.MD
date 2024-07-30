@@ -22,7 +22,7 @@
 - Upgrade and Update by :
 `sudo apt-get update && sudo apt-get upgrade -y`
 - Clone the repository by :
-`git clone https://github.com/mrxbroken011/Vchatbotv2 && cd ChatbotV2`
+`git clone https://github.com/mrxbroken011/Vchatbotv2 && cd Vchatbotv2`
 - Install requirements by :
 `pip3 install -U -r requirements.txt`
 - Fill your variables in the env by :
