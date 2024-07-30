@@ -18,7 +18,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʟᴏᴄᴀʟ ʜᴏsᴛ/ᴠᴘs 」─
 </h4>
 
-- Get your [Necessary Variables](https://github.com/mrxbroken011/Vchatbotv2/main/sample.env)
+- Get your [Necessary Variables](https://github.com/mrxbroken011/Vchatbotv2/blob/main/sample.env)
 - Upgrade and Update by :
 `sudo apt-get update && sudo apt-get upgrade -y`
 - Clone the repository by :
