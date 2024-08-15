@@ -10,11 +10,10 @@ from config import MONGO_URL
 from Venom import VenomX
 from Venom.modules.helpers import CHATBOT_ON, is_admins
 
-# List of abusive words
-ABUSIVE_WORDS = ["chutiya", "gaandu", "randi", "bsdk", "bsdka", "choot", "lund", "gand", "gaand", "boobs", "land", "loda", "chut", "madarchod"]
 
-# bot not abuse only there! 
-FILTERED_CHAT_IDS = [-1002200810390]  
+ABUSIVE_WORDS = [
+    "Chutiya", "Gaandu", "Randi", "Bsdk", "Bsdka", "Choot", "Lund", "Gand", "Gaand", "Boobs", "Land", "Loda", "Chut", "Madarchod"
+]
 
 @VenomX.on_cmd("chatbot", group_only=True)
 @adminsOnly("can_delete_messages")
@@ -29,11 +28,9 @@ async def chaton_(_, m: Message):
     (filters.text | filters.sticker | filters.group) & ~filters.private & ~filters.bot, group=4
 )
 async def chatbot_text(client: Client, message: Message):
-    # Check if the chat ID is in the filtered list
-    if message.chat.id in FILTERED_CHAT_IDS:
-        # Check for abusive words
-        if any(word in message.text.lower() for word in ABUSIVE_WORDS):
-            return  # Ignore the message if it contains abusive words
+    # Check for abusive words
+    if any(word in message.text.lower() for word in ABUSIVE_WORDS):
+        return  # Ignore the message if it contains abusive words
 
     try:
         if (
@@ -120,4 +117,4 @@ async def chatbot_text(client: Client, message: Message):
                         }
                     )
 
-# BY MR BROKEN
+# (©) 2024 Mr x Broken
